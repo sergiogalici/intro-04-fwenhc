@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 1px solid black;
 }
 
 :root {
@@ -24,22 +25,17 @@ body {
   width: 100vw;
   min-height: 100vh;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.tickets-container {
-  width: 1024px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  border: 1px solid black;
-}
-
 .tickets-container__ticket {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50em;
+  padding: 0.3em;
 }
 
 .tickets-container__ticket--first-row,
@@ -50,7 +46,80 @@ body {
   align-items: center;
 }
 
+.tickets-container__ticket--first-row__block-one {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin: 0.3em;
+}
+
+.tickets-container__ticket--first-row__block-one__left,
+.tickets-container__ticket--first-row__block-one__right {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  justify-content: center;
+  margin: 0.3em;
+}
+
+.tickets-container__ticket--first-row__block-one__left__upper {
+  font-size: 1.2em;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.tickets-container__ticket--first-row__block-one__left__lower {
+  font-size: 1em;
+  color: var(--text-secondary);
+}
+
+.tickets-container__ticket--first-row__block-two {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin: 0.3em;
+}
+
+.tickets-container__ticket--first-row__block-two__inner-block-one,
+.tickets-container__ticket--first-row__block-two__inner-block-three {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-two__row-one {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.block-two__row-two {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.tickets-container__ticket--first-row__block-three {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--text-primary);
+  flex: 1;
+  margin: 0.3em;
+}
+
+.tickets-container__ticket img {
+  width: 40px;
+  height: 40px;
+}
+
+.tickets-container__ticket--button {
+  padding: 15px 10px;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
 .tickets-container__date {
+  display: block;
   font-size: 2em;
   font-weight: bold;
 }
